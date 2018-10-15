@@ -1,10 +1,15 @@
+.tnm-footer-container {
+  @extend .clearfix;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 .tnm-footer {
   @extend .clearfix;
 
   margin: 0 -20px;
   padding: 32px 20px 24px;
   line-height: 32px;
-  background-color: rgba(0, 0, 0, 0.05);
+
 
   .tnm-fnb {
     @extend .remove-style;
@@ -17,7 +22,8 @@
 
     .__xe_menu_image {
       max-width: 200px;
-      max-height: 100px;
+      max-height: 26px;
+      vertical-align: middle;
     }
 
     a {

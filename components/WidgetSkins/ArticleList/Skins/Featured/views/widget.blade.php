@@ -9,7 +9,7 @@
                     {{-- article.title --}}<strong>번글은 한줄로만 표시됩니다 맞나? 커다란 이미지 확인해주세요 두줄일까요 한줄일까요</strong>
                     <em>{{-- article.category --}}인터뷰</em>
                     {{-- @important .cover-image는 첫번째 아이템에서만 노출 --}}
-                    <span class="cover-image" style="background-image:url('{{-- thumbnail.url --}}{{ $_skin::asset('images/temp_img.jpg') }}')"></span>
+                    <span class="cover-image" style="background-image:url('{{-- thumbnail.url --}}https://loremflickr.com/640/360?random=1')"></span>
                 </a>
             </li>
             {{-- /loop item --}}

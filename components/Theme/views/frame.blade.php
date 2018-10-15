@@ -3,19 +3,16 @@
 </span> --}}
 
 <div class="tnm-container tnm-orange">
-    @include($theme::view('_header'))
+    <div class="tnm-main-wrap">
+        @include($theme::view('_header'))
 
-    <div class="flex-column">
-        <div class="flex-wrap">
-            <div class="tnm-main">
-                <main>
-                    {!! $content !!}
-                </main>
-            </div>
-        </div>
+        <main class="tnm-main tnm-flexible-box">
+            {!! $content !!}
+        </main>
+    </div>
 
-        <div class="flex-wrap">
-            @include($theme::view('_footer'))
-        </div>
+    <div class="tnm-footer-container">
+        @include($theme::view('_footer'))
     </div>
 </div>
+
