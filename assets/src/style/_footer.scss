@@ -1,0 +1,34 @@
+.tnm-footer {
+  @extend .clearfix;
+
+  margin: 0 -20px;
+  padding: 32px 20px 24px;
+  line-height: 32px;
+  background-color: rgba(0, 0, 0, 0.05);
+
+  .tnm-fnb {
+    @extend .remove-style;
+    margin-bottom: 12px;
+
+    li {
+      font-size: 14px;
+      vertical-align: middle;
+    }
+
+    .__xe_menu_image {
+      max-width: 200px;
+      max-height: 100px;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  address {
+    font-size: 13px;
+    vertical-align: middle;
+    font-style: normal;
+  }
+}

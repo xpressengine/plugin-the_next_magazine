@@ -1,0 +1,58 @@
+.clearfix {
+  zoom: 1;
+  clear: both;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.button-reset {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  background: transparent;
+  -webkit-appearance: none;
+
+  &:active {
+    color: unset;
+  }
+}
+
+.remove-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0 none;
+  background: transparent;
+  -webkit-appearance: none;
+
+  ul,
+  li,
+  ul,
+  ol,
+  dl,
+  dt,
+  dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0 none;
+    background: transparent;
+    -webkit-appearance: none;
+  }
+
+  &:active {
+    color: unset;
+  }
+}
+
+.thumbnail-covered {
+  display: block;
+  height: auto;
+  padding-top: 60%;
+  background-size: cover;
+  background-position: 50% 50%;
+}

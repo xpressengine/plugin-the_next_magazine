@@ -1,0 +1,19 @@
+@media (min-width: 769px) {
+  .type-card {
+    .item {
+      float: left;
+      width: 48.5%;
+      margin-bottom: 32px;
+
+      /*
+        2 column 배치
+        왼쪽 item clear
+      */
+      &:nth-child(odd) {
+        clear: both;
+        margin-right: 3%;
+      }
+    }
+  }
+}
+

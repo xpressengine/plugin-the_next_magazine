@@ -1,0 +1,41 @@
+.type-about {
+  .widget-title {
+    display: none;
+  }
+  .item {
+    @extend .clearfix;
+
+    .cover-image {
+      margin: 0 -20px;
+      padding-top: 63%;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .type-about {
+    .widget-title {
+      display: block;
+    }
+    .item {
+      .cover-image {
+        float: left;
+        width: 48%;
+        margin: 0;
+        padding-top: 30%;
+      }
+      .box-content {
+        float: right;
+        width: 47%;
+      }
+      &:nth-child(even) {
+        .cover-image {
+          float: right;
+        }
+        .box-content {
+          float: left;
+        }
+      }
+    }
+  }
+}

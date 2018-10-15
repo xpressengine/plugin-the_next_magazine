@@ -1,0 +1,166 @@
+.tnm-head-container {
+  position: relative;
+  margin: 0 -20px;
+  background-color: #FFF;
+  z-index: 50;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .tnm-header {
+    padding: 12px 20px;
+    padding-right: 8px;
+    height: 72px;
+    line-height: 72px - (12px * 2);
+
+    /* .site-logo */
+    .site-logo {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      font-family: --apple-system, Avenir;
+      font-size: 24px;
+      white-space: nowrap;
+      overflow:hidden;
+
+      a {
+        color: #4167d9;
+        text-decoration: none;
+      }
+      img {
+        height: auto;
+        max-width: 230px;
+        max-height: 48px;
+        vertical-align: middle;
+      }
+    }
+
+    .buttons {
+      float: right;
+
+      button {
+        @extend .remove-style;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .tnm-navs {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 20px 0;
+    color: #FFF;
+    height: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    a {
+      color: #FFF;
+    }
+
+    nav,
+    .gnb,
+    .snb,
+    .unb {
+      @extend .remove-style;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .gnb {
+      float: left;
+      width: 55%;
+
+      .__xe_menu_image {
+        max-width: 200px;
+        max-height: 100px;
+      }
+
+      li {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 40px;
+
+
+        >.gnb-children {
+
+          // margin-bottom:
+          li {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 30px;
+
+            .gnb-children {
+              margin-left: 16px;
+
+              a {
+                color: #4C4C4C;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .snb {
+      float: right;
+      width: 40%;
+      padding-top: 8px;
+
+      .__xe_menu_image {
+        max-width: 200px;
+        max-height: 100px;
+      }
+
+      li {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 32px;
+      }
+    }
+
+    .unb {
+      @extend .clearfix;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      li {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 24px;
+        vertical-align: middle;
+
+        &:after {
+          content: "/";
+          padding: 2px 0 0 6px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  &.open {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .tnm-navs {
+      display: flex;
+    }
+  }
+}
