@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+@import 'webfont';
+@import "reset";
+@import "helper";
+@import "colorset";
+@import "header";
+@import "main";
+@import "footer";
+
+@import "content";
+
+/* common */
+html,
+body {
+  height: 100%;
+}
+
+html {
+  &.tnm-covered {
+    position: relative;
+
+    body {
+      overflow: hidden;
+    }
+  }
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, SpoqaHanSans, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.tnm-container {
+  height: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1025px) {
+  .tnm-container {
+  }
+  .tnm-head-container {
+    position: fixed;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background-color: transparent;
+
+    .tnm-header {
+      padding-top: 40px;
+      padding-left: 40px;
+      padding-bottom: 24px;
+      height: auto;
+
+      .site-logo {
+        font-size: 32px;
+      }
+
+      .buttons {
+        float: none;
+        display: none;
+      }
+    }
+
+    .tnm-navs {
+      display: flex;
+      padding-left: 40px;
+      color: #000;
+
+      a {
+        color: #000;
+      }
+
+      .gnb,
+      .snb {
+        float: none;
+        width: 100%;
+      }
+
+      .gnb {
+        margin-bottom: 24px;
+      }
+
+      .unb {
+        margin-top: 80px;
+        margin-bottom: 73px;
+      }
+    }
+  }
+
+  .flex-column {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 280px;
+  }
+
+  .tnm-main,
+  .tnm-footer .tnm-fnb {
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .tnm-main {
+    padding-top: 40px;
+  }
+
+  .tnm-footer {
+    .tnm-fnb {
+      li {
+        display: inline-block;
+        margin-right: 24px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+
+          &:focus,
+          &:hover {
+            border-bottom: 1px solid #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1271px) {
+  .tnm-main,
+  .tnm-footer .tnm-fnb {
+    float: right;
+    // width: 70%;
+  }
+}
+
+@media (min-width: 1271px) and (max-width: 1439px) {
+  .tnm-main,
+  .tnm-footer .tnm-fnb {
+    // width: 78%;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .tnm-main,
+  .tnm-footer .tnm-fnb {
+    // width: 75%;
+    max-width: 1032px;
+  }
+}

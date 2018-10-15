@@ -1,0 +1,69 @@
+{
+  "name": "xpressengine-plugin/the_next_magazine",
+  "description": "The Next Magazine 테마와 이와 잘 어울리는 게시물 리스트 위젯의 스킨을 포함하고 있습니다",
+  "keywords": [
+    "xpressengine",
+    "xe",
+    "plugin",
+    "xe-theme"
+  ],
+  "license": "LGPL-2.1-or-later",
+  "version": "1.0.0",
+  "type": "xpressengine-plugin",
+  "support": {
+    "email": "developers@xpressengine.com"
+  },
+  "authors": [
+    {
+      "name": "XpressEngine",
+      "email": "developers@xpressengine.com",
+      "homepage": "https://www.xpressengine.io",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "xpressengine": {
+      "title": "The Next Magazine (TNM)",
+      "component": {
+        "theme/the_next_magazine@tnm": {
+          "class": "Xpressengine\\Plugins\\TheNextMagazine\\Components\\Theme\\Theme",
+          "name": "The Next Magazine",
+          "description": "The Next Magazine"
+        },
+        "widget/board@list/skin/the_next_magazine@featured": {
+          "class": "Xpressengine\\plugins\\TheNextMagazine\\Components\\WidgetSkins\\ArticleList\\Skins\\Featured\\FeaturedSkin",
+          "name": "TNM-Featured 스킨",
+          "description": "TNM-Featured 스킨"
+        },
+        "widget/board@list/skin/the_next_magazine@card": {
+          "class": "Xpressengine\\plugins\\TheNextMagazine\\Components\\WidgetSkins\\ArticleList\\Skins\\Card\\CardSkin",
+          "name": "TNM-Card 스킨",
+          "description": "TNM-Card 스킨"
+        },
+        "widget/board@list/skin/the_next_magazine@category": {
+          "class": "Xpressengine\\plugins\\TheNextMagazine\\Components\\WidgetSkins\\ArticleList\\Skins\\Category\\CategorySkin",
+          "name": "TNM-Category 스킨",
+          "description": "TNM-Category 스킨"
+        },
+        "widget/board@list/skin/the_next_magazine@about": {
+          "class": "Xpressengine\\plugins\\TheNextMagazine\\Components\\WidgetSkins\\ArticleList\\Skins\\About\\AboutSkin",
+          "name": "TNM-About 스킨",
+          "description": "TNM-About 스킨"
+        }
+      }
+    }
+  },
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Xpressengine\\Plugins\\TheNextMagazine\\": "./"
+    },
+    "classmap": [
+      "Components/Theme/Theme.php",
+      "Components/WidgetSkins/ArticleList/Skins/About/AboutSkin.php",
+      "Components/WidgetSkins/ArticleList/Skins/Card/CardSkin.php",
+      "Components/WidgetSkins/ArticleList/Skins/Category/CategorySkin.php",
+      "Components/WidgetSkins/ArticleList/Skins/Featured/FeaturedSkin.php"
+    ]
+  }
+}

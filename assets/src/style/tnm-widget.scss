@@ -1,0 +1,59 @@
+@import 'helper';
+@import 'colorset';
+@import 'widget/featured';
+@import 'widget/card';
+@import 'widget/slider';
+@import 'widget/about';
+
+.tnm-widget-container {
+  @extend .clearfix;
+  margin-bottom: 72px;
+  color: #000;
+  background-color: rgba(251, 252, 101, .1);
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .widget-title {
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 20px;
+    padding-bottom: 16px;
+
+    em,
+    & {
+      padding-bottom: 16px;
+    }
+    em {
+      font-style: normal;
+      border-bottom: 1px solid $blue;
+    }
+  }
+}
+
+.tnm-widget {
+  color: #000;
+
+  .cover-image {
+    @extend .thumbnail-covered;
+    text-indent: -99999px;
+    line-height: 0;
+    margin-bottom: 16px;
+    background-color: #E7EAF1;
+    background-image: url('../../../assets/core/common/img/default_image_1200x800.jpg');
+  }
+
+  ul {
+    @extend .remove-style;
+    @extend .clearfix;
+  }
+
+  .item {
+    em {
+      display: block;
+      font-style: normal;
+      color: #909090;
+    }
+  }
+}
