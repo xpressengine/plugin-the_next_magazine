@@ -1,15 +1,16 @@
+@import 'variables';
 @import 'helper';
-@import 'colorset';
+@import 'widget/colorset';
 @import 'widget/featured';
 @import 'widget/card';
-@import 'widget/slider';
+@import 'widget/category';
 @import 'widget/about';
 
 .tnm-widget-container {
   @extend .clearfix;
-  margin-bottom: 72px;
+  margin-bottom: 80px;
   color: #000;
-  background-color: rgba(251, 252, 101, .1);
+  // background-color: rgba(251, 252, 101, .1);
 
   a {
     text-decoration: none;
@@ -18,16 +19,45 @@
 
   .widget-title {
     border-bottom: 1px solid #d8d8d8;
-    font-size: 20px;
+    font-size: 1.25rem;
+    margin: 0 0 36px;
     padding-bottom: 16px;
 
     em,
     & {
       padding-bottom: 16px;
     }
+
     em {
       font-style: normal;
       border-bottom: 1px solid $blue;
+    }
+  }
+
+  .item {
+    strong {
+      font-size: 1rem;
+      line-height: 1.5em;
+      margin-bottom: 5px;
+    }
+    em {
+      font-size: 0.875rem;
+    }
+    a {
+      @extend .clearfix;
+
+      &:hover,
+      &:focus {
+        strong {
+          color: #767676;
+        }
+        em {
+          color: #C9C9C9;
+        }
+        p {
+          color: #ADADAD;
+        }
+      }
     }
   }
 }

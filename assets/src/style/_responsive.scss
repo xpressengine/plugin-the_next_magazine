@@ -1,0 +1,117 @@
+@media (min-width: 1025px) {
+  .tnm-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+  }
+  .tnm-head-container {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 280px;
+    height: 100%;
+    background-color: transparent;
+
+    .tnm-header {
+      padding-top: 40px;
+      padding-left: 40px;
+      padding-bottom: 24px;
+      height: auto;
+
+      .site-logo {
+        font-size: 32px;
+      }
+
+      .buttons {
+        float: none;
+        display: none;
+      }
+    }
+
+    .tnm-navs {
+      display: flex;
+      padding-left: 40px;
+      color: #000;
+
+      a {
+        color: #000;
+      }
+
+      .gnb,
+      .snb {
+        float: none;
+        width: 100%;
+      }
+
+      .gnb {
+        margin-bottom: 24px;
+      }
+
+      .unb {
+        margin-top: 80px;
+        margin-bottom: 73px;
+      }
+    }
+  }
+
+  .tnm-main-wrap,
+  .tnm-footer-wrap {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1440px;
+  }
+
+  .tnm-flexible-box {
+    float: left;
+    margin-left: 336px;
+    margin-right: 56px;
+  }
+
+  .tnm-main {
+    padding-top: 40px;
+  }
+
+  .tnm-footer-container {
+    min-height: 132px;
+  }
+
+  .tnm-footer {
+    padding-left: 0;
+
+    .tnm-fnb {
+      li {
+        display: inline-block;
+        margin-right: 24px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+
+          &:focus,
+          &:hover {
+            border-bottom: 1px solid #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1271px) {
+  .tnm-flexible-box {
+    // float: right;
+    max-width: 1048px;
+  }
+}
+@media (min-width: 1271px) and (max-width: 1439px) {
+  .tnm-flexible-box {
+  }
+}
+
+@media (min-width: 1440px) {
+  .tnm-flexible-box {
+  }
+}

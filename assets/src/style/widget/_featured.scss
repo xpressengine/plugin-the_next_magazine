@@ -1,50 +1,81 @@
-.type-featured {
-  font-size: 16px;
+.tnm-widget-container {
+  &.type-featured {
+    font-size: 1rem;
 
-  .item {
-    font-size: 16px;
-    line-height: 24px;
-    border-bottom: 1px solid #DFDFDF;
+    .item {
+      line-height: 24px;
+      border-bottom: 1px solid #DFDFDF;
 
-    &:last-child {
-      border-bottom: 0 none;
-    }
+      strong {
+        @include webkit-box(3);
+        overflow: hidden;
+        max-height: 4.5em;
+        font-size: 1.125rem;
+        line-height: 1.5em;
+      }
 
-    em {
-      font-size: 14px;
-      line-height: 20px;
-      margin-bottom: 16px;
+      em {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 16px;
+      }
+
+      &:first-child {
+        strong {
+          @include webkit-box(1);
+          white-space: nowrap;
+          font-size: 1.75rem;
+          line-height: 1.3em;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0 none;
+      }
+
+      &:nth-child(1n+6) {
+        display: none;
+      }
     }
   }
 }
 
 @media (min-width: 769px) {
-  .type-featured {
-    .item {
-      float: right;
-      width: 32%;
-      margin-bottom: 18px;
-
-      &:first-child {
-        float: left;
-        margin-bottom: 0;
-        width: 64%;
-        border-bottom: 0 none;
-        font-size: 18px;
+  .tnm-widget-container {
+    &.type-featured {
+      .tnm-widget {
+        position: relative;
       }
-      &:last-child {
-        margin-bottom: 0;
+
+      .item {
+        float: left;
+        margin-bottom: 18px;
+        margin-left: 3%;
+        width: 35%;
+
+        &:first-child {
+          margin-bottom: 0;
+          margin-left: 0;
+          width: 62%;
+          border-bottom: 0 none;
+          font-size: 18px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
-}
 
-@media (min-width: 1440px) {
-  .type-featured {
-    .item {
-      width: 34%;
-      &:first-child {
-        width: 62%;
+  @media (min-width: 1440px) {
+    .type-featured {
+      .item {
+        width: 33%;
+
+        &:first-child {
+          width: 64%;
+        }
       }
     }
   }

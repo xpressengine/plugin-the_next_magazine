@@ -1,35 +1,22 @@
 <div class="tnm-widget-container type-card">
-    <h2 class="widget-title"><em>Recent Tech Posts</em></h2>
+    <h2 class="widget-title"><em>{{ $widgetConfig['@attributes']['title'] }}</em></h2>
     <div class="tnm-widget">
         <ul>
-            <li class="item">
-                <a href="#link">
-                    <span class="cover-image" style="background-image:url('https://loremflickr.com/640/360?random=1')"></span>
-                    <strong>한줄로 나오게 했습니다 스타트업과 대기업</strong>
-                    <em>2018.08.17ㆍ인터뷰</em>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#link">
-                    <span class="cover-image">{##이미지없다}</span>
-                    <strong>{##이미지없다} 스타트업과 대기업, 각기 다른 제품 관리자 </strong>
-                    <em>2018.08.17ㆍ인터뷰</em>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#link">
-                    <span class="cover-image">{##나도이미지없다}</span>
-                    <strong>{##나도이미지없다} 스타트업과 대기업, 각기 다른 제품 관리자 </strong>
-                    <em>2018.08.17ㆍ인터뷰</em>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#link">
-                    <span class="cover-image" style="background-image:url('https://loremflickr.com/640/360?random=2')"></span>
-                    <strong>스타트업과 대기업, 각기 다른 제품 관리자 </strong>
-                    <em>2018.08.17ㆍ인터뷰</em>
-                </a>
-            </li>
+            @foreach ($list as $item)
+                <li class="item">
+                    <a href="{{ $urlHandler->getShow($item) }}">
+                        <span class="cover-image" @if($item->board_thumbnail_path) style="background-image:url('{{ $item->board_thumbnail_path }}')" @endif></span>
+                        <strong>한줄로 나오게 했습니다 스타트업과 대기업</strong>
+                        <em>
+                            <span data-xe-timeago="{{ $item->created_at }}" title="{{ $item->created_at }}">{{ $item->created_at }}</span>
+                            @if ($boardConfig->get('category') == true && $item->boardCategory !== null)
+                                &#x318D;{{-- ㆍ --}}
+                                {{xe_trans($item->boardCategory->categoryItem->word)}}
+                            @endif
+                        </em>
+                    </a>
+                </li>
+            @endforeach
         </ul>
     </div>
 </div>

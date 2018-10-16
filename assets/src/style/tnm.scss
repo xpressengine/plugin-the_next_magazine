@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import 'variables';
+
 @import 'webfont';
 @import "reset";
 @import "helper";
@@ -28,12 +30,14 @@ html {
     }
   }
 }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Spoqa Han Sans', "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .tnm-container {
   max-height: 100%;
+  line-height: 1.6em;
 }
 
 .tnm-main-wrap,

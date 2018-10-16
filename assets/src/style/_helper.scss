@@ -9,6 +9,14 @@
   }
 }
 
+@mixin webkit-box($line: 3) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
 .button-reset {
   margin: 0;
   padding: 0;
