@@ -2,6 +2,25 @@
 return [
     'view' => 'theme',
     'setting' => [
+        [
+            'section' => [
+                'class' => 'common',
+                'title' => '일반'
+            ],
+            'fields' => [
+                /* colorset */
+                'colorset' => [
+                    '_type' => 'select',
+                    'label' => 'Colorset',
+                    'options' => [
+                        'blue' => 'Blue',
+                        'orange' => 'Orange',
+                        'green' => 'Green',
+                        'gray' => 'Gray'
+                    ]
+                ],
+            ]
+        ],
         /* 헤더 설정 */
         [
             'section' => [

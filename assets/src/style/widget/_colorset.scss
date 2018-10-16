@@ -1,17 +1,19 @@
-.tnm-head-container {
-  &.open {
-    .buttons button {
-      color: #FFF;
+@mixin widget-colorset($name, $color) {
+  .tnm-#{$name} .tnm-widget-container,
+  .tnm-widget-container.tnm-#{$name} {
+    .widget-title {
+      em {
+        border-bottom-color: $color;
+      }
     }
 
-    .tnm-orange & {
-      background-color: $orange;
-    }
-    .tnm-blue & {
-      background-color: $blue;
-    }
-    .tnm-green & {
-      background-color: $green;
+    &.type-about .item .box-content a {
+      color: $color;
     }
   }
 }
+
+@include widget-colorset('orange', $orange);
+@include widget-colorset('blue', $blue);
+@include widget-colorset('green', $green);
+@include widget-colorset('gray', $gray);

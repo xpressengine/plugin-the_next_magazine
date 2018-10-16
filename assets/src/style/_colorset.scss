@@ -1,14 +1,59 @@
-.tnm-head-container {
-  &.open {
-    .buttons button {
-      color: #FFF;
+@mixin colorset($name, $color) {
+  .tnm-#{$name} {
+    .tnm-head-container {
+      .tnm-header .site-logo a {
+        color: $color;
+      }
+
+      .tnm-navs {
+        a {
+          &:hover,
+          &:focus {
+            color: $color;
+          }
+        }
+        .unb li:after {
+          color: $color;
+        }
+      }
+
+      &.open {
+        background-color: $color;
+
+        .tnm-header .site-logo a {
+          color: #FFF;
+        }
+
+        .tnm-navs {
+          a {
+            &:hover,
+            &:focus {
+              color: #FFF;
+            }
+          }
+          .unb li:after {
+            color: #FFF;
+          }
+        }
+      }
     }
 
-    .tnm-orange & {
-      background-color: $orange;
-    }
-    .tnm-blue & {
-      background-color: $blue;
+    .tnm-main {
+      xe-content,
+      .xe-content,
+      .xe-content-editable {
+        blockquote {
+          border-left-color: $color;
+        }
+        a {
+          color: $color;
+        }
+      }
     }
   }
 }
+
+@include colorset('orange', $orange);
+@include colorset('blue', $blue);
+@include colorset('green', $green);
+@include colorset('gray', $gray);

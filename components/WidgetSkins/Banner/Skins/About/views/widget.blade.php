@@ -1,4 +1,4 @@
-<div class="tnm-widget-container type-about tnm-green">
+<div class="tnm-widget-container type-about">
     <h2 class="widget-title"><em>About US</em></h2>
     <div class="tnm-widget">
         <ul>
