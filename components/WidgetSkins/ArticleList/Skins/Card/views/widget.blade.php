@@ -6,7 +6,7 @@
                 <li class="item">
                     <a href="{{ $urlHandler->getShow($item) }}">
                         <span class="cover-image" @if($item->board_thumbnail_path) style="background-image:url('{{ $item->board_thumbnail_path }}')" @endif></span>
-                        <strong>한줄로 나오게 했습니다 스타트업과 대기업</strong>
+                        <strong>{!! $item->title !!}</strong>
                         <em>
                             <span data-xe-timeago="{{ $item->created_at }}" title="{{ $item->created_at }}">{{ $item->created_at }}</span>
                             @if ($boardConfig->get('category') == true && $item->boardCategory !== null)

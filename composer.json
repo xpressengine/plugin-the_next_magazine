@@ -45,22 +45,24 @@
           "name": "TNM-Category 스킨",
           "description": "TNM-Category 스킨"
         },
-        "widget/board@list/skin/the_next_magazine@about": {
-          "class": "Xpressengine\\plugins\\TheNextMagazine\\Components\\WidgetSkins\\ArticleList\\Skins\\About\\AboutSkin",
+        "widget/banner@widget/skin/the_next_magazine@about": {
+          "class": "Xpressengine\\plugins\\TheNextMagazine\\Components\\WidgetSkins\\Banner\\Skins\\About\\AboutSkin",
           "name": "TNM-About 스킨",
           "description": "TNM-About 스킨"
         }
       }
     }
   },
-  "require": {},
+  "require": {
+    "xpressengine-plugin/banner": "*"
+  },
   "autoload": {
     "psr-4": {
       "Xpressengine\\Plugins\\TheNextMagazine\\": "./"
     },
     "classmap": [
       "Components/Theme/Theme.php",
-      "Components/WidgetSkins/ArticleList/Skins/About/AboutSkin.php",
+      "Components/WidgetSkins/Banner/Skins/About/AboutSkin.php",
       "Components/WidgetSkins/ArticleList/Skins/Card/CardSkin.php",
       "Components/WidgetSkins/ArticleList/Skins/Category/CategorySkin.php",
       "Components/WidgetSkins/ArticleList/Skins/Featured/FeaturedSkin.php"

@@ -8,11 +8,11 @@
                         <div class="box-content">
                             <strong>{!! $item->title !!}</strong>
                             <em>
-                                    <span data-xe-timeago="{{ $item->created_at }}" title="{{ $item->created_at }}">{{ $item->created_at }}</span>
-                                    @if ($boardConfig->get('category') == true && $item->boardCategory !== null)
-                                        &#x318D;{{-- ㆍ --}}
-                                        {{xe_trans($item->boardCategory->categoryItem->word)}}
-                                    @endif
+                                <span data-xe-timeago="{{ $item->created_at }}" title="{{ $item->created_at }}">{{ $item->created_at }}</span>
+                                @if ($boardConfig->get('category') == true && $item->boardCategory !== null)
+                                    &#x318D;{{-- ㆍ --}}
+                                    {{xe_trans($item->boardCategory->categoryItem->word)}}
+                                @endif
                             </em>
                             <p class="text">{{ $item->pure_content }}</p>
                         </div>
