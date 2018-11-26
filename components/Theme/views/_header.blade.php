@@ -27,7 +27,7 @@
                         {{-- 1st menu --}}
                         @foreach(menu_list($config->get('mainMenu')) as $menu1st)
                         <li>
-                            <a href="{{ url($menu1st['url']) }}" @if($menu1st['target'] !== '_self') target="{{ $menu1st['target'] }}" @endif>
+                            <a href="{{ url($menu1st['url']) }}" @if($menu1st['target'] !== '_self') target="{{ $menu1st['target'] }}" @endif @if($menu1st['selected']) class="selected" @endif>
                                 {{ $menu1st['link'] }}
                             </a>
 
@@ -36,13 +36,13 @@
                                 <ul class="gnb-children">
                                     @foreach($menu1st['children'] as $menu2nd)
                                         <li>
-                                            <a href="{{ url($menu2nd['url']) }}" @if($menu2nd['target'] !== '_self') target="{{ $menu2nd['target'] }}" @endif>{{ $menu2nd['link'] }}</a>
+                                            <a href="{{ url($menu2nd['url']) }}" @if($menu2nd['target'] !== '_self') target="{{ $menu2nd['target'] }}" @endif @if($menu2nd['selected']) class="selected" @endif>{{ $menu2nd['link'] }}</a>
 
                                             {{-- 3rd menu --}}
                                             @if(count($menu2nd['children']))
                                                 <ul class="gnb-children">
                                                     @foreach($menu2nd['children'] as $menu3rd)
-                                                        <li><a href="{{ url($menu3rd['url']) }}" @if($menu3rd['target'] !== '_self') target="{{ $menu3rd['target'] }}" @endif>{{ $menu3rd['link'] }}</a></li>
+                                                        <li><a href="{{ url($menu3rd['url']) }}" @if($menu3rd['target'] !== '_self') target="{{ $menu3rd['target'] }}" @endif @if($menu3rd['selected']) class="selected" @endif>{{ $menu3rd['link'] }}</a></li>
                                                     @endforeach
                                                 </ul>
                                             @endif
